@@ -6,6 +6,10 @@
   html {
     @apply scroll-behaviour-smooth;
   }
+
+  body {
+    @apply text-body font-medium text-neutral-darkest bg-neutral-lightest;
+  }
 }
 
 @layer utilities {
