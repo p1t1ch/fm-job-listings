@@ -27,6 +27,6 @@
 
   .job-info:not(:first-child)::before {
     content: '';
-    @apply w-1 h-1 rounded-full bg-neutral-light mx-4;
+    @apply w-1 h-1 rounded-full bg-neutral-light mx-2 md:mx-4;
   }
 }

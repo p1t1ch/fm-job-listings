@@ -45,6 +45,7 @@ module.exports = {
       padding: {
         19: '4.75rem',
         30: '7.5rem',
+        35: '8.75rem',
         38: '9.5rem',
       },
       backgroundImage: {

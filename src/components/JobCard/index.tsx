@@ -13,6 +13,8 @@ interface JobCardProps extends React.HTMLProps<HTMLDivElement> {
   tools?: string[]
   isNew?: boolean
   isFeatured?: boolean
+  filters: string[]
+  setFilters: React.Dispatch<React.SetStateAction<string[]>>
 }
 
 function JobCard({
@@ -28,6 +30,8 @@ function JobCard({
   location,
   languages,
   tools = [],
+  filters,
+  setFilters,
   className = '',
   ...props
 }: JobCardProps) {
@@ -50,7 +54,12 @@ function JobCard({
               </div>
             )}
           </div>
-          <h2 className="font-bold text-body md:text-lg leading-6 md:leading-6 mb-2">{position}</h2>
+          <a
+            href="/"
+            className="inline-block font-bold text-body hover:text-primary transition-colors md:text-lg leading-6 md:leading-6 mb-2"
+          >
+            {position}
+          </a>
           <ul className="flex items-center whitespace-nowrap">
             <li className="job-info">{postedAt}</li>
             <li className="job-info">{contract}</li>
@@ -58,14 +67,21 @@ function JobCard({
           </ul>
         </div>
         <ul className="justify-self-end flex flex-wrap pt-4 md:pt-0 -mb-4">
-          {[role, level, ...languages, ...tools].map(tag => (
-            <li
-              key={tag}
-              className="flex items-center h-8 px-2 rounded-tag bg-primary bg-opacity-10 hover:bg-opacity-100 font-bold text-primary hover:text-white transition-colors mr-4 mb-4"
-            >
-              <button>{tag}</button>
-            </li>
-          ))}
+          {[role, level, ...languages, ...tools].map(tag => {
+            const isTagInFilters = filters.includes(tag)
+            return (
+              <li key={tag} className="mr-4 mb-4">
+                <button
+                  onClick={() => setFilters(isTagInFilters ? filters.filter(f => f !== tag) : [...filters, tag])}
+                  className={`flex items-center h-8 px-2 rounded-tag font-bold bg-primary ${
+                    isTagInFilters ? 'text-white' : 'bg-opacity-10 text-primary'
+                  } hover:bg-opacity-100 hover:text-white transition-colors`}
+                >
+                  {tag}
+                </button>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </article>
