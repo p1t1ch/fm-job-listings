@@ -2,7 +2,7 @@ import React from 'react'
 
 interface JobCardProps extends React.HTMLProps<HTMLDivElement> {
   company: string
-  // Logo: SvgrComponent
+  logo: string
   position: string
   role: string
   level: string
@@ -17,7 +17,7 @@ interface JobCardProps extends React.HTMLProps<HTMLDivElement> {
 
 function JobCard({
   company,
-  // Logo,
+  logo,
   isNew = false,
   isFeatured = false,
   position,
@@ -37,7 +37,7 @@ function JobCard({
       {...props}
     >
       {isFeatured && <div className="absolute top-0 bottom-0 left-0 w-featured bg-primary" />}
-      {/* <Logo className="absolute sm:static w-12 h-12 sm:w-22 sm:h-22 mr-6" title={`${company} logo`} /> */}
+      <img src={logo} alt={`${company} logo`} className="absolute sm:static w-12 h-12 sm:w-22 sm:h-22 mr-6" />
       <div className="flex-grow mr-6">
         <div className="flex items-center mb-2">
           <div className="font-bold text-sm text-primary mr-4">{company}</div>

@@ -39,7 +39,7 @@ module.exports = {
         39: '9.75rem',
       },
       maxWidth: {
-        container: '72.375rem',
+        container: '69.375rem',
       },
       padding: {
         19: '4.75rem',
