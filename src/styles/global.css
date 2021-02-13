@@ -22,7 +22,7 @@
   }
 
   .job-info {
-    @apply flex items-center text-neutral-dark;
+    @apply flex items-center text-neutral-dark text-mobile md:text-body leading-6;
   }
 
   .job-info:not(:first-child)::before {

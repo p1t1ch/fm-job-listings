@@ -22,6 +22,7 @@ module.exports = {
       fontSize: {
         body: ['.9375rem', 1.6],
         badge: ['.6875rem', 1.28],
+        mobile: ['.8125rem', 1.15],
       },
       boxShadow: {
         DEFAULT: '0px 15px 20px -5px rgba(13, 113, 130, 0.15)',
@@ -44,6 +45,7 @@ module.exports = {
       padding: {
         19: '4.75rem',
         30: '7.5rem',
+        38: '9.5rem',
       },
       backgroundImage: {
         'header-desktop': 'url(../images/bg-header-desktop.svg)',
