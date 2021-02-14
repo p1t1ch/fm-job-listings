@@ -54,14 +54,14 @@ function JobCard({ job, filters, setFilters, className = '', ...props }: JobCard
             <li className="job-info">{location}</li>
           </ul>
         </div>
-        <ul className="justify-self-end flex flex-wrap pt-4 md:pt-0 -mb-4">
+        <ul className="justify-self-end flex flex-wrap pt-4 md:pt-0 -mb-4 -mr-4">
           {[role, level, ...languages, ...tools].map(tag => {
             const isTagInFilters = filters.includes(tag)
             return (
               <li key={tag} className="mr-4 mb-4">
                 <button
                   onClick={() => setFilters(isTagInFilters ? filters.filter(f => f !== tag) : [...filters, tag])}
-                  className={`flex items-center h-8 px-2 rounded-tag font-bold bg-primary ${
+                  className={`flex items-center h-8 px-2 rounded-tag font-bold text-mobile bg-primary ${
                     isTagInFilters ? 'text-white' : 'bg-opacity-10 text-primary'
                   } hover:bg-opacity-100 hover:text-white focus-visible:shadow-badge transition-colors`}
                 >

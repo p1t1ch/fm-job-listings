@@ -12,3 +12,6 @@
 </p>
 
 For this challenge:
+
+1. Break my head with JSON/images sourcing (and simply add it to the static folder afterwards)
+1. Practice with Jest & RTL

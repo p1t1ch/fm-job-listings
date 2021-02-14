@@ -9,7 +9,7 @@ interface FiltersProps extends React.HTMLProps<HTMLDivElement> {
 function Filters({ filters, setFilters, className = '', ...props }: FiltersProps) {
   return (
     <div className={`flex justify-between bg-white shadow rounded-card py-5 px-6 md:px-10 ${className}`} {...props}>
-      <ul className="flex flex-wrap -mb-4">
+      <ul className="flex flex-wrap -mb-4 -mr-4">
         {filters.map(filter => (
           <li
             key={filter}
