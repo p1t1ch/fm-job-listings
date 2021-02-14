@@ -1,40 +1,28 @@
 import React from 'react'
+import { Job } from '@/components/Jobs'
 
 interface JobCardProps extends React.HTMLProps<HTMLDivElement> {
-  company: string
-  logo: string
-  position: string
-  role: string
-  level: string
-  postedAt: string
-  contract: string
-  location: string
-  languages: string[]
-  tools?: string[]
-  isNew?: boolean
-  isFeatured?: boolean
+  job: Omit<Job, 'id'>
   filters: string[]
   setFilters: React.Dispatch<React.SetStateAction<string[]>>
 }
 
-function JobCard({
-  company,
-  logo,
-  isNew = false,
-  isFeatured = false,
-  position,
-  role,
-  level,
-  postedAt,
-  contract,
-  location,
-  languages,
-  tools = [],
-  filters,
-  setFilters,
-  className = '',
-  ...props
-}: JobCardProps) {
+function JobCard({ job, filters, setFilters, className = '', ...props }: JobCardProps) {
+  const {
+    company,
+    logo,
+    position,
+    role,
+    level,
+    postedAt,
+    contract,
+    location,
+    languages,
+    tools,
+    isNew,
+    isFeatured,
+  } = job
+
   return (
     <article className={`relative shadow bg-white ${className}`} {...props}>
       <img
