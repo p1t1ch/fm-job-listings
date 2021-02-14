@@ -42,12 +42,14 @@ function JobCard({ job, filters, setFilters, className = '', ...props }: JobCard
               </div>
             )}
           </div>
-          <a
-            href="/"
-            className="inline-block font-bold text-body hover:text-primary focus-visible:text-primary transition-colors md:text-lg leading-6 md:leading-6 mb-2"
-          >
-            {position}
-          </a>
+          <h3>
+            <a
+              href="/"
+              className="inline-block font-bold text-body hover:text-primary focus-visible:text-primary transition-colors md:text-lg leading-6 md:leading-6 mb-2"
+            >
+              {position}
+            </a>
+          </h3>
           <ul className="flex items-center whitespace-nowrap">
             <li className="job-info">{postedAt}</li>
             <li className="job-info">{contract}</li>
