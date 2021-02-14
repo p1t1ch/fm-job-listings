@@ -26,6 +26,7 @@ module.exports = {
       },
       boxShadow: {
         DEFAULT: '0px 15px 20px -5px rgba(13, 113, 130, 0.15)',
+        badge: '0 0 0 2px #2B3939',
       },
       borderRadius: {
         card: '.3125rem',
@@ -52,6 +53,15 @@ module.exports = {
         'header-desktop': 'url(../images/bg-header-desktop.svg)',
         'header-mobile': 'url(../images/bg-header-mobile.svg)',
       },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['focus-visible'],
+      textColor: ['focus-visible'],
+      textDecoration: ['focus-visible'],
+      boxShadow: ['focus-visible'],
+      margin: ['first'],
     },
   },
 }

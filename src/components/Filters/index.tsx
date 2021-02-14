@@ -18,7 +18,7 @@ function Filters({ filters, setFilters, className = '', ...props }: FiltersProps
             <div className="px-2">{filter}</div>
             <button
               onClick={() => setFilters(filters.filter(f => f !== filter))}
-              className="w-8 h-8 grid place-items-center bg-primary hover:bg-neutral-darkest transition-colors"
+              className="w-8 h-8 grid place-items-center bg-primary hover:bg-neutral-darkest focus-visible:bg-neutral-darkest transition-colors"
             >
               <RemoveIcon title={`Remove "${filter}" filter`} />
             </button>
@@ -27,7 +27,7 @@ function Filters({ filters, setFilters, className = '', ...props }: FiltersProps
       </ul>
       <button
         onClick={() => setFilters([])}
-        className="text-neutral-dark font-bold text-mobile leading-8 hover:text-primary hover:underline transition-colors"
+        className="text-neutral-dark font-bold text-mobile leading-8 hover:text-primary hover:underline focus-visible:text-primary focus-visible:underline transition-colors"
       >
         Clear <span className="sr-only">all active filters</span>
       </button>

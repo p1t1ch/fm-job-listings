@@ -42,7 +42,7 @@ function JobCard({
         alt={`${company} logo`}
         className="absolute top-0 left-6 md:top-1/2 md:left-10 transform -translate-y-1/2 w-12 h-12 md:w-22 md:h-22"
       />
-      <div className="relative overflow-hidden rounded-card flex flex-col md:flex-row md:items-center pt-8 pb-6 px-6 md:pb-8 md:pl-38 md:pr-10">
+      <div className="relative overflow-hidden rounded-card flex flex-col md:flex-row md:items-center pt-8 pb-6 px-5 md:pb-8 md:pl-38 md:pr-10">
         {isFeatured && <div className="absolute top-0 bottom-0 left-0 w-featured bg-primary" />}
         <div className="flex-grow pb-4 md:pb-0 md:mr-10 border-b border-neutral-light md:border-none">
           <div className="flex items-center mb-2">
@@ -56,7 +56,7 @@ function JobCard({
           </div>
           <a
             href="/"
-            className="inline-block font-bold text-body hover:text-primary transition-colors md:text-lg leading-6 md:leading-6 mb-2"
+            className="inline-block font-bold text-body hover:text-primary focus-visible:text-primary transition-colors md:text-lg leading-6 md:leading-6 mb-2"
           >
             {position}
           </a>
@@ -75,7 +75,7 @@ function JobCard({
                   onClick={() => setFilters(isTagInFilters ? filters.filter(f => f !== tag) : [...filters, tag])}
                   className={`flex items-center h-8 px-2 rounded-tag font-bold bg-primary ${
                     isTagInFilters ? 'text-white' : 'bg-opacity-10 text-primary'
-                  } hover:bg-opacity-100 hover:text-white transition-colors`}
+                  } hover:bg-opacity-100 hover:text-white focus-visible:shadow-badge transition-colors`}
                 >
                   {tag}
                 </button>

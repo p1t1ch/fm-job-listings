@@ -5,8 +5,6 @@ import JobCard from '@/components/JobCard'
 import Filters from '@/components/Filters'
 import jobsData from '../../static/data.json'
 
-// TODO: fix 320 cards width
-// TODO: add focus styles
 // TODO: check rerenders
 // TODO: write tests
 
